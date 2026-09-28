@@ -1,4 +1,4 @@
-# 🚀 QA Metrics Analytics & AI Dashboard para o produto Certfy Onboarding Presencial
+# 🚀 QA Metrics Analytics & AI Dashboard para o produto da VSOFT
 
 Um dashboard interativo e inteligente projetado para extrair, processar e analisar métricas de performance da equipe de Quality Assurance (QA) diretamente do Azure DevOps to time Onboarding Presencial. 
 O sistema oferece uma visão clara sobre o esforço de testes, gargalos de retrabalho e integra Inteligência Artificial para gerar relatórios executivos automatizados.
