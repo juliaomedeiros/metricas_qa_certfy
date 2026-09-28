@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres_qa:
+    image: postgres:15-alpine
+    container_name: qa_metrics_db
+    environment:
+      POSTGRES_USER: qa_admin
+      POSTGRES_PASSWORD: qa_password123
+      POSTGRES_DB: qametrics
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  pg_data:

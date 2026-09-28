@@ -1,0 +1,32 @@
+Como Arquiteto de Software, eu te dou os parabéns pela sua visão analítica! Você acabou de esbarrar em um dos conceitos mais fascinantes da análise de dados: o Efeito de Diluição da Média.
+
+Respondendo diretamente à sua pergunta: Sim, a lógica do código está perfeitamente correta. Não há erro no cálculo. O que está acontecendo é que os KPIs globais e os cards de "Custo da Qualidade" estão respondendo a duas perguntas de negócio completamente diferentes.
+
+Vou te explicar exatamente por que a matemática faz sentido e por que o "Card c/ Defeito" mostra 11h 9m, enquanto a soma dos KPIs dá apenas ~9h 16m (8h 43m + 0h 33m).
+
+1. A Matemática dos KPIs (A Visão Global)
+Na Linha 1 do seu código, os KPIs olham para o Todo.
+
+Média Tempo Teste (8h 43m): O sistema pegou todas as horas gastas em testes e dividiu por todos os 5 cards do board.
+
+Média Tempo Rework (0h 33m): O sistema pegou as horas gastas em retrabalho e dividiu por todos os 5 cards (mesmo aqueles que não tiveram bug nenhum e cujo retrabalho foi zero).
+
+Isso significa que a média global de retrabalho é "puxada para baixo" pelos cards perfeitos.
+
+2. A Matemática do Custo da Qualidade (A Visão Isolada)
+Aqui é onde a mágica acontece. No código do "Custo da Qualidade", nós separamos os grupos antes de calcular.
+
+Média Card Limpo (8h 38m): O sistema ignorou os cards com problemas e calculou a média de tempo APENAS dos cards que passaram de primeira.
+
+Média Card c/ Defeito (11h 9m): O sistema ignorou os cards perfeitos. Ele pegou apenas os cards que tiveram bugs, somou o (Tempo de Teste + Tempo de Retrabalho) desses cards específicos e dividiu apenas por eles.
+
+O Resumo da Ópera (Por que não bate?)
+Se você somar o KPI de Teste (8h 43m) com o de Retrabalho (0h 33m), você terá a média de esforço de um card genérico da sua sprint (~9h 16m).
+
+No entanto, o Custo da Qualidade te mostra que um card com defeito não é genérico. Quando um card tem bug, ele não gasta apenas 33 minutos de retrabalho. Como isolamos ele, vemos a realidade crua: um card problemático toma, em média, 11 horas e 9 minutos da vida do seu QA (unindo o teste inicial longo + a correção).
+
+Conclusão Arquitetural:
+Você não precisa alterar o código. Essa diferença é exatamente o trunfo do seu dashboard. Você pode virar para a sua equipe e dizer:
+
+"Pessoal, na média geral, nós gastamos 9h por card. Mas reparem no Custo da Qualidade: toda vez que vocês mandam um card com erro, o tempo do QA salta para 11h 9m. Estamos perdendo horas preciosas por causa de bugs."
+

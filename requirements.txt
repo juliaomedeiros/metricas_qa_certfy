@@ -1,0 +1,10 @@
+crewai
+azure-devops
+streamlit
+pandas
+python-dotenv
+plotly
+langchain-google-genai 
+google-generativeai 
+psycopg2-binary
+sqlalchemy

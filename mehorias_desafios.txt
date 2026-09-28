@@ -1,0 +1,23 @@
+
+Melhorar
+
+Incluir - total de cars com defeito e total de cars sem defeito e mandem total de cards geral e "tira a quantidade de defeitos"
+talves incluir: media de difeitos pro card
+Incluir horas totais de card
+incluir horas totais de defeitos
+rever o grafico d Esforço Médio por Card (Teste vs Retrabalho) para ser em porcentagem  e foca no tempo gasto com retrbalho e tirar a horas para nao comprometer produtividade
+ Esforço Total por Analista - trocar horas por pocentagem, vendo o quanto por cento de horas totias cada QA gastou, tirando a media e trocando por porcentagem
+
+Criar tag de dektop e web para saber o que é sustetação /inovação do protuto e oq eu se gasa mais
+
+
+
+reunião sobre métricas 23/02:
+
+definir quais métricas serão importantes quantificar focando na qualidade do processo(5 no maximo) que seja comum a todos os produtos
+ver qual a melhor forma(baixo custo) para subir essa aplicação e dashboard
+Felipe foca na parte visual - e como a gente pode juntar esse front e puxar os dados a partir do board do azure?
+
+defeitos encontrados por regreçaao - tem um campo para isso - looker
+defeito encontrados por testes funcionais
+tempo de execução em dias uteis

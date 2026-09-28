@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+env/
+build/
+dist/
+
+# Streamlit
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# CrewAI & Ambientes
+.env
+.python-version
+.pyenv/
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs e Dados
+*.log
+data/
+
+#Imagens
+*.png
